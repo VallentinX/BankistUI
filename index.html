@@ -1,0 +1,165 @@
+<!-- HTML file by @Jonas Schmedtmann -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+
+    <link
+      rel="shortcut icon"
+      type="image/png"
+      href="./images/iconBankist.png"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+
+    <title>Bankist</title>
+  </head>
+  <body>
+    <header>
+      <a href="./index.html">
+        <img src="./images/iconBankist.png" alt="Logo" class="logo"
+      /></a>
+      <p class="welcome">Welcome to FWB</p>
+      <nav>
+        <div class="login">
+          <form class="login">
+            <input
+              type="text"
+              placeholder="user"
+              class="login_input login_input-user"
+            />
+            <!-- In practice, use type="password" -->
+            <input
+              type="password"
+              placeholder="PIN"
+              maxlength="4"
+              class="login_input login_input-pin"
+            />
+            <button class="login_btn">Log in</button>
+          </form>
+        </div>
+
+        <button class="log-out hidden">Log out</button>
+      </nav>
+    </header>
+
+    <div class="front">
+      <div class="shorts">
+        <span>FWB</span>
+        <strong>ATM</strong>
+      </div>
+      <h1>Fictional Website Bank</h1>
+      <div class="reasons"></div>
+      <img src="./images/world.png" alt="" />
+      <p>Everywhere For <strong>YOU</strong>!</p>
+      <p>Statistics From Last Year</p>
+      <div class="statistics">
+        <div class="layer">
+          <div class="one">Closed Accounts 1&#46;7k &#47; 3&#46;3M</div>
+        </div>
+        <div class="layer">
+          <div class="four">Customers On Loan&#58; 57&#37;</div>
+        </div>
+        <div class="layer">
+          <div class="three">Students On Loan&#58; 42&#37;</div>
+        </div>
+        <div class="layer">
+          <div class="two">New Customers 32K</div>
+        </div>
+      </div>
+    </div>
+
+    <main class="app hidden">
+      <div class="balance">
+        <div>
+          <p class="balance_label">Current balance</p>
+          <span class="date"> * </span>
+        </div>
+        <p class="balance_value">0000€</p>
+      </div>
+
+      <div class="movements"></div>
+
+      <div class="summary">
+        <p class="summary_label">
+          In: <span class="summary_value summary_value-in">0000€</span>
+        </p>
+        <p class="summary_label">
+          Out: <span class="summary_value summary_value-out">0000€</span>
+        </p>
+        <p class="summary_label">
+          Interest:
+          <span class="summary_value summary_value-interest">0000€</span>
+        </p>
+        <button class="btn-sort">SORT</button>
+      </div>
+
+      <div class="options">
+        <div class="operation operation-transfer">
+          <h2>Transfer money</h2>
+          <form class="form form-transfer">
+            <div>
+              <input
+                type="text"
+                class="form_input form_input-to"
+                placeholder="Reciver's ID"
+              />
+              <input
+                type="number"
+                class="form_input form_input-amount"
+                placeholder="Amount"
+              />
+            </div>
+            <button class="form_btn form_btn-transfer">Send</button>
+          </form>
+        </div>
+
+        <div class="operation operation-loan">
+          <h2>Request loan</h2>
+          <form class="form form-loan">
+            <input
+              type="number"
+              class="form_input form_input-loan-amount"
+              placeholder="Amount"
+            />
+            <button class="form_btn form_btn-loan">Request</button>
+          </form>
+        </div>
+
+        <div class="operation operation-close">
+          <h2>Close account</h2>
+          <form class="form form-close">
+            <div>
+              <input
+                type="text"
+                class="form_input form_input-user"
+                placeholder="Your ID"
+              />
+              <input
+                type="password"
+                maxlength="6"
+                class="form_input form_input-pin"
+                placeholder="PIN"
+              />
+            </div>
+            <button class="form_btn form_btn-close">Confirm</button>
+          </form>
+        </div>
+      </div>
+
+      <p class="logout-timer">
+        You will be logged out in <span class="timer">00:00</span>
+      </p>
+    </main>
+
+    <footer>
+      <a href="https://x.com/jonasschmedtman?s=20"
+        >&copy; by Jonas Schmedtmann</a
+      >
+    </footer>
+
+    <script src="./javaScript/accounts.js"></script>
+    <script src="./javaScript/javaScript.js"></script>
+  </body>
+</html>
